@@ -258,14 +258,7 @@
 #  undef  CONFIG_PTR_IS_NOT_INT
 #endif
 
-/* GCC supports inlined functions for version C99 and above */
-
-#  if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
-#    define CONFIG_HAVE_INLINE 1
-#  else
-#    undef CONFIG_HAVE_INLINE
-#    define inline
-#  endif
+#  define CONFIG_HAVE_INLINE 1
 
 /* ISO C11 supports anonymous (unnamed) structures and unions, added in
  * GCC 4.6 (but might be suppressed with -std= option)
